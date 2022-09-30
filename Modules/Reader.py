@@ -19,7 +19,7 @@ class Reader:
     def file_reader_excel(file):
         table = pd.read_excel(file)
         tdata  = pd.DataFrame(table)
-        return f"{tdata}"
+        return tdata
 
     @staticmethod
     def file_reader_doc(file):
@@ -27,14 +27,14 @@ class Reader:
         t = docx.Document(file)
         for word in t.paragraphs:
             text.append(word.text)
-        return f"{text}"
+        return text
 
     @staticmethod
     def file_reader_json(file):
         text=""
         with open(file,'r') as buffer:
             text = json.load(buffer)
-        return f"{text}"
+        return text
 
     @staticmethod
     def file_reader_txt(file):
@@ -42,6 +42,6 @@ class Reader:
         with open(file, 'r') as buffer:
             for line in buffer:
                 text.append(line)
-        return f"{text}"
+        return text
 
 

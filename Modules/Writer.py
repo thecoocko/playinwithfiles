@@ -19,7 +19,7 @@ class Writer(Reader):
         #         text[i] = str(text[i])
         with open(file, 'a') as buffer:
             buffer.write(text)
-        return  Writer.notification() + Reader.file_reader_txt(file)
+        return  Writer.notification() + str(Reader.file_reader_txt(file))
     
     @staticmethod
     def file_write_docx(file,text):
