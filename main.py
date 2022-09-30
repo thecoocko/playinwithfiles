@@ -11,12 +11,12 @@ def main():
     subfolders, filesrun_fast_scandir = run_fast_scandir('D:\\рандом параша\\trainproject',[".txt"])
     print(filesrun_fast_scandir)
     filename = input("Input your filename:\t")
-    text = input('Input your message:\t')
-    writer = Writer(filename, text)
-    print(writer.file_write_txt(filename, text))
     reader = Reader(filename)
     LANG = input('ENG - english, UA - ukranian:\t').upper()
-    print(encryptor(reader.file_reader_txt(filename),LANG))
+    text = encryptor(reader.file_reader_txt(filename),LANG)
+    writer = Writer(filename, text)
+    print(writer.file_write_txt(filename, text))
+    print(reader.file_reader_txt(filename))
     # filename = input('filename: ')
     # filename = 'someDoc.docx'
     # filename = 'someSheet.xlsx'
