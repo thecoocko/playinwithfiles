@@ -14,9 +14,9 @@ class Writer(Reader):
     
     @staticmethod
     def file_write_txt(file,text):
-        # for i in range(len(text)):
-        #     if isinstance(text[i],int) or isinstance(text[i], float):
-        #         text[i] = str(text[i])
+        for i in range(len(text)):
+             if isinstance(text[i],int) or isinstance(text[i], float):
+                 text[i] = str(text[i])
         with open(file, 'a') as buffer:
             buffer.write(text)
         return  Writer.notification() + str(Reader.file_reader_txt(file))
