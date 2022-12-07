@@ -1,5 +1,5 @@
 from Modules.Reader import Reader
-import random
+
 
 
 global alphabet 
